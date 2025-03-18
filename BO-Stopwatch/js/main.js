@@ -50,3 +50,16 @@ slider.oninput = function(){
     rangeValue.innerText = slider.value + "x";
     body.style.fontSize = slider.value + "2%";
 }
+
+const paragraph = document.getElementById("js--text");
+const img = document.getElementById("js--img");
+//data ophalen
+let data = fetch("data.json").then(
+    function(binnenGekomenData){
+        return binnenGekomenData.json();
+    }).then(
+        function(echteData){
+            paragraph.innerHTML = echteData.text;
+            img.setAttribute("src", echteData.img);
+        }
+    );

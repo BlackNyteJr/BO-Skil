@@ -17,7 +17,7 @@ body{
     align-items: center;
     min-height: 100vh;
     flex-wrap: wrap;
-    font-family: sans-serif;
+    font-family: monospace;
 }
 
 .card{
@@ -27,6 +27,22 @@ body{
     background: white;
     box-shadow: 0rem 2rem 4rem 1rem rgb(0,0,0,0.4);
     flex-shrink: 0;
+}
+
+.card--buy{
+    display: flex;
+    flex-direction: column;
+    padding: 2rem;
+}
+
+.card--buy img{
+    height: 70%;
+    width: 100%;
+}
+
+.card--buy p{
+    height: 20%;
+    font-size: 75%;
 }
 
 .card--slider{
