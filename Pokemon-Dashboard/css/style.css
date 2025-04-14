@@ -1,0 +1,201 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html{
+    font-size: 62.5%;
+}
+
+body{
+    font-size: 2rem;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    background: #020024;
+    background: linear-gradient(68deg,rgba(2, 0, 36, 1) 0%, rgba(9, 9, 121, 1) 35%, rgba(0, 212, 255, 1) 100%);
+    padding: 4rem;
+}
+
+.cards{
+    height: 85vh;
+    display: grid;
+    width: 100%;
+    grid-template-columns: repeat(12,1fr);
+    grid-template-rows: repeat(12,1fr);
+    gap: 2rem;
+}
+
+.card{
+    list-style: none;
+    background: #7684e5;
+    border-radius: 1rem;
+    box-shadow: 0 2rem 4rem 0 rgba(0, 0, 0, 0.5);
+}
+
+.card--first{
+    grid-column: 1 / 5;
+    grid-row: 1 / 7;
+}
+
+.search{
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    padding: 4rem;
+    margin: 4rem;
+    gap: 1rem;
+    max-width: 80%;
+    padding-top: 1rem;
+    margin-top: 2rem;
+}
+
+.search > label{
+    font-family: l
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: italic;
+    font-size: 3rem;
+    padding-bottom: 1rem;
+}
+
+.search > input{
+    height: 3rem;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: italic;
+    font-size: 2rem;
+    border-radius: 0.5rem;
+    padding-left: 0.5rem;
+    background: #fffbf7;
+}
+
+.search > button{
+    margin: 0;
+    padding: 0;
+    border-radius: 0.5rem;
+    height: 4rem;
+    border: 0;
+    background: #4617b4;
+    color: #ffebde;
+    font-family: "Lora", serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: italic;
+}
+
+.search > button:hover{
+    cursor: pointer;
+}
+
+.card--second{
+    grid-column: 5 / 13;
+    grid-row: 1 / 8;
+    padding: 2rem;
+}
+
+.card--third{
+    grid-row: 7 / 13;
+    grid-column: 2 / 5;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 4rem;
+}
+
+.card--third > img{
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.card--third > button{
+    width: 15rem;
+    height: 6rem;
+    font-size: 2rem;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: italic;
+    border: none;
+    background: #4617b4;
+    color: #ffebde;
+    border-radius: 0.5rem;
+}
+
+.card--third > button:hover{
+    cursor: pointer;
+}
+
+.card--third > h1{
+    position: absolute;
+    top: 70%;
+    left: 22%;
+    transform: translate(-50%, -50%);
+    font-size: 6rem;
+    visibility: hidden;
+}
+
+.card--fourth{
+    grid-row: 8 / 12;
+    grid-column: 5 / 9;
+    padding: 4rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 4rem;
+}
+
+.card--fourth > input{
+    width: 70%;
+    height: 4rem;
+    font-size: 2rem;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: italic;
+    padding-left: 0.5rem;
+    background: #fffbf7;
+}
+
+@media screen and (max-width: 87.5rem){
+    .card--first > div > p{
+        display: none;
+    }
+    .card--second{
+        grid-row: 1 / 8;
+    }
+    .card--third{
+        grid-column: 1 / 5;
+    }
+    .card--third > h1{
+    top: 70%;
+    left: 18%;
+    transform: translate(-50%, -50%);
+    font-size: 8rem;
+    }
+    
+}
+
+@media screen and (max-width: 62.5rem){
+    .card--first, .card--second, .card--fourth{
+        display: none;
+    }
+
+    .card--third{
+        grid-column: 1 / 12;
+        grid-row: 1 / 12;
+        padding: 6rem;
+    }
+    
+    .card--third > h1{
+    top: 45%;
+    left: 45%;
+    transform: translate(-50%, -50%);
+    font-size: 10rem;
+    }
+}
