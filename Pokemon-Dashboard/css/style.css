@@ -52,7 +52,7 @@ body{
 }
 
 .search > label{
-    font-family: l
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     font-optical-sizing: auto;
     font-weight: 400;
     font-style: italic;
